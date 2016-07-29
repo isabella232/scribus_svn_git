@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # pull changes from SVN
 git svn fetch
