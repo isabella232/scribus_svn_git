@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 SVN_SERVER=svn://scribus.net
 
