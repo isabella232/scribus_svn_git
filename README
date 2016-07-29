@@ -1,5 +1,4 @@
-README
-======
+# README
 
 This repository contains the meta-data used to convert the Scribus SVN
 (svn://scribus.net) repository to Git.
@@ -18,24 +17,33 @@ tags from SVN tags and pushes the result to the configured "origin"
 Git remote repository. (To congigure this origin Git remote repo, 
 just do a "git remote add repo_name repo_url" in the shell).
 
+## How to setup
 
-How to set-up
--------------
+First, you will have to clone this repository. We suppose you are cloning it into `~/src`, but you can pick any directory you prefer.
 
-1. create empty git repository
-          git init <nice_name>
-2. move into the git repository
-          cd <nice_name>
-3. initialize git svn
-          ./path/to/git_repo_init.sh
-4. configure remote Git server
-          git remote add origin <URL/to/remote>
-5. import svn into git
-          ./path/to/update_from_svn.sh
+    cd ~/src
+    git clone https://github.com/scribusproject/scribus_svn_git.git
+
+Then create a local repository called `scribus-github-sync` (or any other name you see fit) that you will use to contain the sync.
+
+    cd ~/src
+    git init scribus-github-sync
+
+Finally, use the scripts from the `scribus_svn_git` repository to setup the all the needed information. (it will take some time)
+
+    cd ~/src/scribus-github-sync
+    ~/src/scribus_svn_git/git_repo_init.sh
+    git remote add origin https://github.com/scribusproject/scribus.git
+
+## How to sync
+
+Now, each time you want to update the `scribusproject/scribus` you go into the `scribus_svn_git` repository and run the update script:
+
+   cd ~/src/scribus-github-sync
+   ~/src/scribus_svn_git/update_from_svn.sh
 
 
-Caveat
-------
+## Caveat
 
 All SVN commiters need to be listed in svn_authors.txt. A missing
 author will lead to an error:
@@ -49,7 +57,6 @@ the following format:
 
 and re-run the import.
 
-External references
-===================
+## External references
 
 * github to svn and svn to github sync scripts using another git repo : http://zone.spip.org/trac/spip-zone/browser/_outils_/svn2git/trunk
