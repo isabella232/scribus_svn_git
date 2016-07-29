@@ -17,6 +17,14 @@ tags from SVN tags and pushes the result to the configured "origin"
 Git remote repository. (To congigure this origin Git remote repo, 
 just do a "git remote add repo_name repo_url" in the shell).
 
+## Requirements
+
+- bash
+- git
+- subversion
+- git-svn
+- whitail or dialog
+
 ## How to setup
 
 First, you will have to clone this repository. We suppose you are cloning it into `~/src`, but you can pick any directory you prefer.
