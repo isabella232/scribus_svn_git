@@ -29,7 +29,7 @@ Then create a local repository called `scribus-github-sync` (or any other name y
     cd ~/src
     git init scribus-github-sync
 
-Finally, use the scripts from the `scribus_svn_git` repository to setup the all the needed information. (it will take some time)
+Finally, use the scripts from the `scribus_svn_git` repository to setup the local repository so that it can be used for syncing the Scribus repositories. (it will take some time)
 
     cd ~/src/scribus-github-sync
     ~/src/scribus_svn_git/git_repo_init.sh
