@@ -47,8 +47,8 @@ Finally, use the scripts from the `scribus_svn_git` repository to setup the loca
 
 Now, each time you want to update the `scribusproject/scribus` you go into the `scribus_svn_git` repository and run the update script:
 
-   cd ~/src/scribus-github-sync
-   ~/src/scribus_svn_git/update_from_svn.sh
+    cd ~/src/scribus-github-sync
+    ~/src/scribus_svn_git/update_from_svn.sh
 
 
 ## Caveat
