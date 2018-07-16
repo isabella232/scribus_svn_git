@@ -65,6 +65,20 @@ the following format:
 
 and re-run the import.
 
+## Trouble shooting
+
+### Pushed a non svn commit
+
+If you have pushed a commit that does not come from SVN and it's still the latest commit:
+
+From an up to date (with the wrong commit) local copy of the Scribus Github code::
+
+```sh
+git reset --keep HEAD~
+git log
+git push --force-with-lease upstream master
+```
+
 ## External references
 
 * github to svn and svn to github sync scripts using another git repo : http://zone.spip.org/trac/spip-zone/browser/_outils_/svn2git/trunk
